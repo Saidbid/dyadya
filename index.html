@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Дядя Алим — Трайлпарк</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, sans-serif; color: #fff; background: #12121c; line-height: 1.6; }
+    section { padding: 80px 8%; text-align: center; }
+    h1 { font-size: 52px; margin-bottom: 14px; }
+    h2 { font-size: 34px; margin-bottom: 36px; }
+    .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center;
+            align-items: center; background: linear-gradient(135deg, #ff7a18, #af002d 70%); }
+    .hero p { font-size: 22px; margin-bottom: 30px; max-width: 650px; }
+    .badge { background: rgba(0,0,0,.3); padding: 8px 20px; border-radius: 30px;
+             margin-bottom: 20px; font-weight: bold; letter-spacing: 1px; }
+    .btn { display: inline-block; padding: 14px 34px; background: #fff; color: #af002d;
+           border: none; border-radius: 30px; font-size: 18px; font-weight: bold;
+           text-decoration: none; cursor: pointer; }
+    .btn:hover { transform: scale(1.05); }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+    .card { background: #1f1f2e; padding: 30px; border-radius: 16px; }
+    .card .icon { font-size: 44px; margin-bottom: 10px; }
+    .alt { background: #171724; }
+    .about { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; justify-content: center; text-align: left; }
+    .about img { width: 320px; max-width: 100%; height: 420px; object-fit: cover; border-radius: 20px;
+                 box-shadow: 0 10px 30px rgba(0,0,0,.5); }
+    .about div { max-width: 480px; font-size: 20px; }
+    .about h2 { text-align: left; margin-bottom: 16px; }
+    .meter { max-width: 600px; margin: 0 auto; text-align: left; }
+    .meter div { margin-bottom: 22px; }
+    .bar { height: 18px; background: #2b2b3f; border-radius: 10px; overflow: hidden; margin-top: 6px; }
+    .bar span { display: block; height: 100%; background: linear-gradient(90deg, #ff7a18, #ffd200);
+                width: 0; transition: width 1.6s ease; }
+    .quote { background: #1a1a28; font-size: 26px; font-style: italic; }
+    .quote small { display: block; margin-top: 12px; font-size: 16px; color: #aaa; font-style: normal; }
+    #twist { display: none; background: linear-gradient(135deg, #1fa2ff, #12d8fa 60%, #a6ffcb);
+             color: #0b2a3a; flex-direction: column; align-items: center; }
+    #twist.show { display: flex; animation: fade 1s ease; }
+    #twist p { font-size: 21px; max-width: 700px; margin-bottom: 14px; }
+    #twist .btn { background: #0b2a3a; color: #fff; margin: 14px 6px 0; }
+    #twist .arsen { width: 300px; max-width: 100%; height: 400px; object-fit: cover; object-position: top;
+                    border-radius: 20px; margin: 16px 0 24px; box-shadow: 0 10px 30px rgba(0,0,0,.3); }
+    #twist .both { width: 560px; max-width: 100%; border-radius: 20px; margin: 20px 0;
+                   box-shadow: 0 10px 30px rgba(0,0,0,.3); }
+    @keyframes fade { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: none; } }
+    footer { text-align: center; padding: 24px; background: #0b0b12; color: #888; }
+  </style>
+</head>
+<body>
+
+  <!-- ГЛАВНЫЙ ЭКРАН -->
+  <section class="hero">
+    <div class="badge">ТРАЙЛПАРК · АРХЫЗ</div>
+    <h1>👑 Дядя Алим</h1>
+    <p>Лучший дядя на планете и хозяин самого крутого проката в Архызе. Это не мнение, это факт. Дальше будут доказательства.</p>
+    <a class="btn" href="#about">Поехали!</a>
+  </section>
+
+  <!-- ПРО АЛИМА -->
+  <section id="about" class="alt">
+    <div class="about">
+      <img src="alim.jpg" alt="Дядя Алим">
+      <div>
+        <h2>Знакомьтесь: Алим</h2>
+        <p>Хозяин Трайлпарка: квадроциклы, драйв и приключения. Для него семья на первом месте, а гости никогда не уезжают без улыбки.</p>
+        <br>
+        <a class="btn" href="https://www.instagram.com/trailpark.arkhyz" target="_blank">📸 Трайлпарк в Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ФАКТЫ -->
+  <section>
+    <h2>Почему дядя Алим — легенда</h2>
+    <div class="cards">
+      <div class="card"><div class="icon">🏍️</div><h3>Квадроциклы</h3><p>Мощная техника для тех, кто любит скорость.</p></div>
+      <div class="card"><div class="icon">💪</div><h3>Всегда поможет</h3><p>Нужна помощь? Дядя Алим уже едет. Скорее всего, на квадрике.</p></div>
+      <div class="card"><div class="icon">🔥</div><h3>Свой бизнес</h3><p>Сделал Трайлпарк с нуля. Уважение!</p></div>
+      <div class="card"><div class="icon">😂</div><h3>Шутит лучше всех</h3><p>Смеются даже те, кто слышал шутку раньше.</p></div>
+    </div>
+  </section>
+
+  <!-- ШКАЛЫ -->
+  <section class="alt">
+    <h2>Научный анализ крутости</h2>
+    <div class="meter" id="meter">
+      <div>Уровень доброты <div class="bar"><span data-w="100%"></span></div></div>
+      <div>Уровень юмора <div class="bar"><span data-w="98%"></span></div></div>
+      <div>Любовь к квадроциклам <div class="bar"><span data-w="100%"></span></div></div>
+      <div>Любимость племянником <div class="bar"><span data-w="100%"></span></div></div>
+    </div>
+  </section>
+
+  <!-- ЦИТАТА -->
+  <section class="quote">
+    «Семья — это главное.»
+    <small>— дядя Алим, наверное</small>
+  </section>
+
+  <!-- КНОПКА СЮРПРИЗА -->
+  <section>
+    <h2>Но есть ещё кое-что...</h2>
+    <button class="btn" id="twistBtn" style="background:#ffd200;color:#222">А это ещё не всё... 👀</button>
+  </section>
+
+  <!-- ФИНАЛ ПРО АРСЕНА -->
+  <section id="twist">
+    <h1>🔧 Дядя Арсен!</h1>
+    <p>Да, дядя Алим — легенда. Но давайте честно: не только Алим крутой.</p>
+    <img class="arsen" src="arsen.jpg" alt="Дядя Арсен">
+    <p>У меня есть ещё один дядя — <b>дядя Арсен</b>. Он работает на СТО <b>«Архыз Сити»</b> и чинит то, что сломалось у всех остальных. Без него никто бы никуда не доехал. 😄</p>
+    <p>Алим даёт прокатиться с ветерком, а Арсен следит, чтобы всё ездило. Идеальная команда!</p>
+    <img class="both" src="both.jpg" alt="Алим и Арсен вместе">
+    <p>Итог такой: <b>оба дяди — лучшие</b>, и мне с ними очень повезло! 💙</p>
+    <div>
+      <button class="btn" onclick="confetti()">🎉 Салют для обоих!</button>
+    </div>
+  </section>
+
+  <footer>Сделано с любовью для двух лучших дядей 💙</footer>
+
+  <script>
+    // Шкалы заполняются при прокрутке
+    new IntersectionObserver((entries, obs) => {
+      if (entries[0].isIntersecting) {
+        document.querySelectorAll('.bar span').forEach(s => s.style.width = s.dataset.w);
+        obs.disconnect();
+      }
+    }, { threshold: 0.4 }).observe(document.getElementById('meter'));
+
+    // Кнопка сюрприза
+    document.getElementById('twistBtn').onclick = () => {
+      const t = document.getElementById('twist');
+      t.classList.add('show');
+      t.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    // Конфетти
+    function confetti() {
+      const colors = ['#ff7a18', '#ffd200', '#1fa2ff', '#af002d', '#a6ffcb', '#fff'];
+      for (let i = 0; i < 120; i++) {
+        const c = document.createElement('div');
+        c.style.cssText = `position:fixed;top:-20px;left:${Math.random()*100}vw;width:10px;height:14px;
+          background:${colors[Math.floor(Math.random()*colors.length)]};z-index:999;
+          transition:transform ${2 + Math.random()*2}s linear, opacity 3s;`;
+        document.body.appendChild(c);
+        requestAnimationFrame(() => {
+          c.style.transform = `translateY(110vh) rotate(${Math.random()*720}deg)`;
+          c.style.opacity = 0;
+        });
+        setTimeout(() => c.remove(), 4500);
+      }
+    }
+  </script>
+</body>
+</html>
